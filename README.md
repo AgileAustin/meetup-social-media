@@ -37,4 +37,8 @@ The Pipedream job is run every day at 9 AM Central Time. When triggered, it:
 * After that, it connects to the Facebook API via a no code step and sends details about the Meetup invite to the [Agile Austin Facebook feed](https://www.facebook.com/AgileAustin/).
 * Finally, it will add the event to the Pipedream key/value map store for comparison on future runs, and then it exits.
 
+Visually, this looks like the following sequential diagram (Facebook is not represented, but you get the point :).
+
+![pipedream-aa](https://github.com/benson8/meetup-social-media/assets/1530537/999a5f20-3b4b-44e0-90dc-1798be778b1d)
+
 
