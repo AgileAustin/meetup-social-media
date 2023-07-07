@@ -28,14 +28,14 @@ Low code is required for:
 
 The Pipedream job is run every day at 9 AM Central Time. When triggered, it:
 
-* Connects to the Meetup API to scrape the upcoming events for Agile Austin. [01-meetup.js](01-meetup.js)
-* Compares the title of events that it finds to what is available in a Pipedream key/value map store. [02-compare-meetup-to-datastore.py](02-compare-meetup-to-datastore.py)
-* If it finds the event already in the key/value map store, it exits. [03-slack-no-code.txt](03-slack-no-code.txt)
-* If it does not find the event, it proceeds to connect to the Slack API via a no code step and send a message in the Agile Austin Slack channel with details for the event. [04-linkedin.py](04-linkedin.py)
-* It then connects to the LinkedIn API via a low code step and sends details about the Meetup invite to the [Agile Austin LinkedIn feed](https://www.linkedin.com/company/3707917). [05-twitter-no-code.txt](05-twitter-no-code.txt)
-* After that, it connects to the Twitter API via a no code step and sends details about the Meetup invite to the [Agile Austin Twitter feed](twitter.com/agileaustin). [06-facebook-no-code.txt](06-facebook-no-code.txt)
-* After that, it connects to the Facebook API via a no code step and sends details about the Meetup invite to the [Agile Austin Facebook feed](https://www.facebook.com/AgileAustin/). [07-append-to-data-store-no-code.txt](07-append-to-data-store-no-code.txt)
-* Finally, it will add the event to the Pipedream key/value map store for comparison on future runs, and then it exits.
+* [01-meetup.js](01-meetup.js) - Connects to the Meetup API to scrape the upcoming events for Agile Austin.
+* [02-compare-meetup-to-datastore.py](02-compare-meetup-to-datastore.py) - Compares the title of events that it finds to what is available in a Pipedream key/value map store.
+* If it finds the event already in the key/value map store, it exits.
+* [03-slack-no-code.txt](03-slack-no-code.txt) - If it does not find the event, it proceeds to connect to the Slack API via a no code step and send a message in the Agile Austin Slack channel with details for the event.
+* [04-linkedin.py](04-linkedin.py) - It then connects to the LinkedIn API via a low code step and sends details about the Meetup invite to the [Agile Austin LinkedIn feed](https://www.linkedin.com/company/3707917).
+* [05-twitter-no-code.txt](05-twitter-no-code.txt) - After that, it connects to the Twitter API via a no code step and sends details about the Meetup invite to the [Agile Austin Twitter feed](twitter.com/agileaustin).
+* [06-facebook-no-code.txt](06-facebook-no-code.txt) - After that, it connects to the Facebook API via a no code step and sends details about the Meetup invite to the [Agile Austin Facebook feed](https://www.facebook.com/AgileAustin/).
+* [07-append-to-data-store-no-code.txt](07-append-to-data-store-no-code.txt) - Finally, it will add the event to the Pipedream key/value map store for comparison on future runs, and then it exits.
 
 Visually, this looks like the following sequential diagram (Facebook is not represented, but you get the point :).
 
