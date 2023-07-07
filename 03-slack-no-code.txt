@@ -1,0 +1,7 @@
+# This is included in the 'Text' field of the Pipedream step. 
+
+Check out another upcoming Agile Austin Meetup event!
+
+Sign-up link - {{steps.Python_Compare_Meetup_To_Data_Store.$return_value[0]}}
+
+{{steps.Python_Compare_Meetup_To_Data_Store.$return_value[1]}}

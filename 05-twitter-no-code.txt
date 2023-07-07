@@ -1,0 +1,5 @@
+# This is included in the 'Text' field of the Pipedream step. 
+
+We just posted another upcoming event on our Meetup page. Sign up and attend at the link below!
+
+{{steps.Python_Compare_Meetup_To_Data_Store.$return_value[0]}}
